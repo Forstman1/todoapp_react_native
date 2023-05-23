@@ -1,14 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import MainScreen from './Screens/MainScreen';
-
-
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import MainScreen from './components/MainScreen';
 
 export default function App() {
   return (
-    <View>
+    <SafeAreaProvider>
       <MainScreen />
-    </View>
+      <StatusBar style="auto" />
+    </SafeAreaProvider>
+      
   );
 }
 
