@@ -4,6 +4,8 @@ COPY . /home/app
 
 RUN npm install -g prisma
 
+RUN prisma generate
+
 WORKDIR /home/app
 
 CMD ["sleep", "1000000"]
