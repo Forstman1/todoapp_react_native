@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const COLORS = {Primary: "lightgray", Secondary: "lightblue"}
+const COLORS = {Primary: "lightgray", Secondary: 'rgb(63,143,174)'}
 
 const styles = StyleSheet.create({
     container: {

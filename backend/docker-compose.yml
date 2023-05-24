@@ -1,0 +1,25 @@
+version : "3"
+
+services:
+  app:
+    container_name: app
+    build : .
+    ports:
+      - "4000:6000"
+    volumes:
+      # - ./Mysql:/var/lib/mysql
+      - .:/home/app
+    restart: always
+  db:
+    image: mysql
+    restart: always
+    container_name: db
+    volumes:
+      - ./Mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: todolist
+      MYSQL_USER: sami
+      MYSQL_PASSWORD: nice
+    ports:
+      - '3306:3306'
