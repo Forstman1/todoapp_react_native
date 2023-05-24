@@ -2,10 +2,10 @@ FROM node
 
 COPY . /home/app
 
-RUN npm install -g prisma
-
+RUN npm install -g prisma 
 RUN prisma generate
 
 WORKDIR /home/app
+RUN npm install @prisma/client
 
 CMD ["sleep", "1000000"]

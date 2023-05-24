@@ -6,16 +6,11 @@ services:
     build : .
     ports:
       - "4000:6000"
-    volumes:
-      # - ./Mysql:/var/lib/mysql
-      - .:/home/app
     restart: always
   db:
     image: mysql
     restart: always
     container_name: db
-    volumes:
-      - ./Mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: example
       MYSQL_DATABASE: todolist
@@ -23,3 +18,6 @@ services:
       MYSQL_PASSWORD: nice
     ports:
       - '3306:3306'
+    volumes:
+      - ../mysql:/var/lib/mysql
+
