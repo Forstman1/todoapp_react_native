@@ -1,7 +1,7 @@
 
 
-const { PrismaClient } = require('@prisma/client');
 const express = require('express')
+const { PrismaClient } = require('@prisma/client');
 
 
 const app = express()
@@ -26,6 +26,7 @@ app.get('/api/todolist', async (req, res) => {
 })
 
 
+
 app.post('/api/addtodo', async (req, res) => {
   
     let { content } = req.body;
@@ -42,6 +43,8 @@ app.post('/api/addtodo', async (req, res) => {
       res.end()
     }
 });
+
+
 
 app.delete('/api/deletetodo/:id' , async (req, res) => {
 

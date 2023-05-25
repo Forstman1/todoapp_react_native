@@ -25,7 +25,7 @@ const fetchTodoList = async () => {
 const addTodo = async (content) => {
   const response = await fetch('http://localhost:4000/api/addtodo', {
     method: 'POST',
-    body: JSON.stringify({content}), // Send the noteSs directly without wrapping it inside an object
+    body: JSON.stringify({content}),
     headers: { 'Content-Type': 'application/json' },
   });
   const data = await response.json();
